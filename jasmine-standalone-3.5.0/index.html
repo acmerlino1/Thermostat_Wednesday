@@ -2,8 +2,10 @@
 <html>
 
 <head> 
-
+ 
   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <link type="text/css" rel="stylesheet" href="./public/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
 
   <title>Thermostat</title>
 
@@ -15,23 +17,17 @@
       <h1 id="temperature"></h1>
       <p>
         <button id="temperature-up">+</button>
-
-        <br>
-
         <h2>Temperature</h2>
-
-        </br>
-
         <button id="temperature-down">-</button>
-
-        <br>
-        
         <h2>Reset</h2>
         <button id="temperature-reset">reset</button>
-        <br>
-        <h2>Power saving:</h2>
-        <button id="powersaving-on">On</button>
-        <button id="powersaving-off">Off</button>
+        <h2>Turn Power saving off:</h2>
+
+        <label width= 100px class="switch">
+          <input type="checkbox" id="powersaving">
+          <span class="slider round"></span>
+        </label>
+      
       </p>
     
       <script src="src/thermostat.js"></script>

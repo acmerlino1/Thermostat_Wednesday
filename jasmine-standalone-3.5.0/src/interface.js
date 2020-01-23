@@ -18,8 +18,12 @@ $(document).ready(function() {
     updateTemperature();
   })
 
+  $('#powersaving').on('click', function() {
+    thermostat.turnPowerSavingOff();
+  })
+
 function updateTemperature() {
   $('#temperature').text(thermostat.temperature);
-
+  $('#temperature').attr('class', thermostat.currentEnergyUsage())
   }
 });
