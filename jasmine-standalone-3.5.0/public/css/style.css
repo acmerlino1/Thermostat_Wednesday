@@ -2,7 +2,8 @@ html,
 body{
   font-family: 'Amatic SC', cursive;
   font-size: 40px;
-  background-color: rgba(210, 218, 203, 0.801);
+  background-color: rgba(98, 243, 236, 0.801);
+  background-image: '/Users/chrisdavidmerlino/Projects/Makers/week-5/Thermostat_Wednesday/jasmine-standalone-3.5.0/public/images/therm.svg';
 }
 
 h2{
@@ -20,7 +21,25 @@ h1{
 } 
 
 button {
-  background-color: rgb(141, 0, 118);
+  background-color: rgb(231, 208, 74);
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+ }
+
+input {
+  border-style: dotted;
+  font-size: 16px;
+  padding: 16px;
+}
+
+ #city-button {
+  background-color: rgb(231, 208, 74);
    border: none;
   color: white;
   padding: 20px;
@@ -71,7 +90,7 @@ button {
 }
 
 input:checked + .slider {
-  background-color: rgb(141, 0, 118);
+  background-color: rgb(231, 208, 74);
 }
 
 input:focus + .slider {
@@ -95,6 +114,38 @@ input:checked + .slider:before {
 
 .low-usage {
   color: green;
+  .char {
+    --name: yell;
+    --dur: 3s;
+    --tf: ease;
+    
+    transform-origin: 50% 100%;
+  }
+  
+  @keyframes {
+    3% {
+      transform:
+        scale(calc(1 * var(--distance-percent) + 1.5)) 
+        rotate(calc(15deg * var(--distance-sine)))
+        translateY(-10%);
+    }
+    6% {
+      transform:
+        scale(calc(1 * var(--distance-percent) + 1.2)) 
+        rotate(calc(15deg * var(--distance-sine)))
+        translateY(-10%);
+    }
+    12% {
+      transform:
+        scale(calc(1 * var(--distance-percent) + 1.5)) 
+        rotate(calc(15deg * var(--distance-sine)))
+        translateY(-10%);
+    }
+    18% { transform: scaleY(1) translateY(-2%); }
+    25% { transform: scaleY(0.98); }
+    50% { transform: scaleY(1); }
+    75% { transform: scale(0.98); }
+  }
 }
 
 .medium-usage {
@@ -103,4 +154,6 @@ input:checked + .slider:before {
 
 .high-usage {
   color: red;
+}
+
 }
